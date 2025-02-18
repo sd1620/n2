@@ -1,9 +1,6 @@
 import streamlit as st
 import time
 from datetime import datetime
-import turtle
-import matplotlib.pyplot as plt
-import numpy as np
 import folium
 from folium.plugins import MarkerCluster
 
@@ -51,12 +48,10 @@ def update_countdown():
         countdown_placeholder.markdown(countdown_str)
 
 # Display the countdown
-update_countdown()
+while True:
+    update_countdown()
+    time.sleep(1)  # Update the countdown every second
 
-# Adding a small delay to simulate a countdown without manually triggering a rerun
-time.sleep(1)
-
-# Rest of your content below...
 # Memories Section
 st.markdown("### 📸 Our Beautiful Memories")
 images = ["uss1.png", "uss2.jpg"]  # Replace with your images
